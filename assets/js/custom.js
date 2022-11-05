@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener("load", function () {
     const loader = document.querySelector(".loader-page");
     loader.className += " hidden";
+
+    localStorage.setItem('theme', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+    toggleSwitch.checked = true;
   });
 
 
@@ -179,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
    OS PREFERS COLOR SCHEME
   ==================================*/
 
-  //DETERMINES IF THE USER HAS A SET THEM 
+  //DETERMINES IF THE USER HAS A SET THEM
   function detectColorScheme() {
     var theme = "light";    //DEFAULT TO LIGHT
 
@@ -196,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
       var theme = "dark";
     }
 
-    //DARK THEME PREFERRED, SET DOCUMENT WITH A 'data-theme' ATTRIBUTE 
+    //DARK THEME PREFERRED, SET DOCUMENT WITH A 'data-theme' ATTRIBUTE
     if (theme == "dark") {
       document.documentElement.setAttribute("data-theme", "dark");
     }
@@ -215,13 +219,13 @@ document.addEventListener('DOMContentLoaded', () => {
   //FUNCTION THAT CHANGES THE THEME, AND SETS A LOCALSTORAGE VARIABLE TO TRACK THE THEME BETWEEN PAGE LOADS
   function switchTheme(e) {
     if (e.target.checked) {
-      localStorage.setItem('theme', 'dark');
-      document.documentElement.setAttribute('data-theme', 'dark');
-      toggleSwitch.checked = true;
-    } else {
       localStorage.setItem('theme', 'light');
       document.documentElement.setAttribute('data-theme', 'light');
       toggleSwitch.checked = false;
+    } else {
+      localStorage.setItem('theme', 'dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+      toggleSwitch.checked = true;
     }
   }
 

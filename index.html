@@ -11,10 +11,9 @@
     <!-- <meta name="theme-color" content="#ffffff"> -->
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#222032" media="(prefers-color-scheme: dark)">
-    <title>Unic – NFT Marketplace PWA Mobile Template</title>
-    <meta name="description" content="Unic – NFT Marketplace PWA Mobile Template">
-    <meta name="keywords"
-        content="bootstrap 5, mobile template, wallet, crypto, currency, about, blog, cordova, phonegap, mobile, html, nft, store, marketplace, pwa" />
+    <title>NFTz HK – NFT Apps</title>
+    <meta name="description" content="NFTz HK – NFT Apps">
+    <meta name="keywords" content="NFTz HK – NFT Apps" />
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="images/favicon/icon-32x32.png" sizes="32x32">
     <!-- IOS SUPPORT -->
@@ -24,8 +23,6 @@
     <link rel="stylesheet" href="assets/css/remixicon.min.css">
     <link rel="stylesheet" href="assets/vendors/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/vendors/zuck_stories/zuck.min.css">
-    <link rel="manifest" href="_manifest.json" />
-
 
 </head>
 
@@ -36,14 +33,6 @@
     <section class="loader-page" id="loaderPage">
         <div class="spinner_flash"></div>
     </section>
-
-    <!-- ===================================
-    START FIXED BACKGROUND IMAGE
-    ==================================== -->
-    <section class="bg-gradient-started">
-        <div class="bg-noise"></div>
-    </section>
-
     <!-- START WRAPPER -->
     <div id="wrapper">
         <!-- START CONTENT -->
@@ -51,13 +40,28 @@
             <!-- ===================================
               START THE HEADER
             ==================================== -->
-            <header class="default heade-sticky bg-transparent header-light">
-                <div class="un-item-logo">
-                    <a href="index.html">
-                        <img class="logo-img" src="images/logo-white.svg" alt="">
-                    </a>
-                </div>
+            <header class="default heade-sticky border-b-gradient">
+                <a href="index.html">
+                    <div class="un-item-logo">
+                        <img class="logo-img light-mode" src="images/logo_b.svg" alt="">
+                        <img class="logo-img dark-mode" src="images/NFTz.hk.png" alt="">
+                    </div>
+                </a>
                 <div class="un-block-right">
+                    <div class="un-notification">
+                        <a href="#" aria-label="activity">
+                            <i class="ri-notification-line"></i>
+                        </a>
+                        <span class="bull-activity"></span>
+                    </div>
+                    <div class="un-user-profile">
+                        <a href="#" aria-label="profile">
+                            <picture>
+                                <source srcset="images/avatar/11.webp" type="image/webp">
+                                <img class="img-avatar" src="images/avatar/11.jpg" alt="">
+                            </picture>
+                        </a>
+                    </div>
                     <!-- menu-sidebar -->
                     <div class="menu-sidebar">
                         <button type="button" name="sidebarMenu" aria-label="sidebarMenu" class="btn"
@@ -75,201 +79,569 @@
                 </div>
             </header>
             <!-- ===================================
-              START INFO ABOUT THE TEMPLATE
+              START THE SPACE STICKY
             ==================================== -->
-            <section class="un-info-template">
-                <div class="main-img-nft">
-                    <picture>
-                        <source srcset="images/other/3d_nfts.webp" type="image/webp">
-                        <img src="images/other/3d_nfts.png" alt="nft picture">
-                    </picture>
-                </div>
-                <div class="block-numbers">
-                    <div class="pages">
-                        <h2>45+</h2>
-                        <p>Page Packs</p>
-                    </div>
-                    <div class="dividar-y"></div>
-                    <div class="components">
-                        <h2>98+</h2>
-                        <p>Components</p>
-                    </div>
-                </div>
-            </section>
+            <div class="space-sticky"></div>
             <!-- ===================================
-              START PAGES LIST
+              START THE STORIES SECTION
             ==================================== -->
-            <section class="un__listPages_started margin-t-30">
-                <div class="content">
-                    <div class="title">
-                        <h3>Unic - NFT Marketplace</h3>
-                        <p>
-                            We Include <span>Creativity</span> and <span>Professionalism</span> in Our Modern Pages for
-                            Ready Use.
-                        </p>
+            <section class="margin-t-20 margin-b-10 stories-section">
+                <!-- un-title-default -->
+                <div class="un-title-default margin-b-20">
+                    <div class="text">
+                        <h2>Stories</h2>
+                        <p>The latest stories of creators</p>
                     </div>
-                    <div class="un-navMenu-default style_glass px-0">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a href="app-pages.html" class="nav-link background">
-                                    <div class="item-content-link">
-                                        <div class="icon">
-                                            <img src="images/icons/icon_page.png" alt="">
+                    <div class="un-block-right">
+                        <a href="#" class="icon-back" aria-label="iconBtn">
+                            <i class="ri-arrow-drop-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- DISPLAY STRORIES -->
+                <div class="display-stories">
+                    <!-- SWIPER -->
+                    <div class="swiper myStories">
+                        <div class="swiper-wrapper wrapper-stories" id="storiesBox">
+                            <!-- MY STORY -->
+                            <div class="swiper-slide spaceBox">
+                                <div class="boxStories">
+                                    <button class="btn add-my-story" data-bs-toggle="modal"
+                                        data-bs-target="#mdllAddStory">
+                                        <div class="my_img">
+                                            <img src="images/avatar/11.jpg" alt="my story">
+                                            <div class="icon">
+                                                <i class="ri-add-fill"></i>
+                                            </div>
                                         </div>
-                                        <h3 class="link-title">Page Packs</h3>
-                                    </div>
-                                    <div class="other-cc">
-                                        <span class="badge-text">+45</span>
-                                        <div class="icon-arrow">
-                                            <i class="ri-arrow-drop-right-line"></i>
+                                        <div class="display-text">
+                                            <span>Create <br> Story</span>
                                         </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="app-homes.html" class="nav-link">
-                                    <div class="item-content-link">
-                                        <div class="icon">
-                                            <img src="images/icons/icon_homes.png" alt="">
-                                        </div>
-                                        <h3 class="link-title">Unic. Homes</h3>
-                                    </div>
-                                    <div class="other-cc">
-                                        <span class="badge-text xs-badge">3</span>
-                                        <div class="icon-arrow">
-                                            <i class="ri-arrow-drop-right-line"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="app-components.html" class="nav-link">
-                                    <div class="item-content-link">
-                                        <div class="icon">
-                                            <img src="images/icons/icon_components.png" alt="">
-                                        </div>
-                                        <h3 class="link-title">Components</h3>
-                                    </div>
-                                    <div class="other-cc">
-                                        <span class="badge-text">+98</span>
-                                        <div class="icon-arrow">
-                                            <i class="ri-arrow-drop-right-line"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- HERE -> ITEMS -> AUTOMATICALLY BY JAVASCRIPT -->
+                        </div>
                     </div>
                 </div>
             </section>
             <!-- ===================================
-              START THE SOME FEATURES
+              START THE NFT SWIPER
             ==================================== -->
-            <section class="un_features_list">
-                <div class="content">
-                    <ul>
-                        <li>
-                            <div class="icon bg-green text-white">
-                                <i class="ri-command-line"></i>
-                            </div>
-                            <h4>Structured Files</h4>
-                            <p>
-                                Find what you're looking for with structured files.
-                            </p>
-                        </li>
-                        <li>
-                            <div class="icon bg-blue text-white">
-                                <i class="ri-switch-fill"></i>
-                            </div>
-                            <h4>PWA Ready</h4>
-                            <p>
-                                Add to the home screen and use it as an app.
-                            </p>
-                        </li>
-                        <li>
-                            <div class="icon bg-pink text-white">
-                                <i class="ri-artboard-2-line"></i>
-                            </div>
-                            <h4>Easy to Customize with Sass</h4>
-                            <p>
-                                We are using Sass for CSS. You can change colors, sizes on single file.
-                            </p>
-                        </li>
-                        <li>
-                            <div class="icon bg-orange text-white">
-                                <i class="ri-stack-line"></i>
-                            </div>
-                            <h4>Bootstrap 5 - Vanilla JS</h4>
-                            <p>
-                                You do not need to use jQuery
-                            </p>
-                        </li>
-                        <li>
-                            <div class="icon bg-secondary text-white">
-                                <i class="ri-toggle-line"></i>
-                            </div>
-                            <h4>Dark Mode is Awesome</h4>
-                            <p>
-                                Turn dark theme on and off with the switch
-                            </p>
-                        </li>
-                    </ul>
+            <section class="unSwiper-cards margin-t-20">
+                <!-- un-title-default -->
+                <div class="un-title-default">
+                    <div class="text">
+                        <h2>Discover</h2>
+                        <p>Be on the lookout for the latest NFTs</p>
+                    </div>
+                    <div class="un-block-right">
+                        <a href="#" class="icon-back" aria-label="iconBtn">
+                            <i class="ri-arrow-drop-right-line"></i>
+                        </a>
+                    </div>
                 </div>
-            </section>
-            <!-- ===================================
-              START THE FOOTER - BUTTONS
-            ==================================== -->
-            <section class="bloack-get-started">
-                <div class="un-navMenu-default p-0">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a href="https://themeforest.net/item/unic-nft-mobile-template/36083774" target="_blank"
-                                class="nav-link bg-transparent">
-                                <div class="item-content-link">
-                                    <div class="icon text-white">
-                                        <i class="ri-shopping-bag-3-fill"></i>
-                                    </div>
-                                    <h3 class="link-title text-white">Get Unic. Today</h3>
-                                </div>
-                                <div class="other-cc">
-                                    <span class="badge-text">$24</span>
-                                    <div class="icon-arrow">
-                                        <i class="ri-arrow-drop-right-line"></i>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="homepage.html" class="nav-link bg-primary">
-                                <div class="item-content-link">
-                                    <div class="icon text-white">
-                                        <i class="ri-home-5-fill"></i>
-                                    </div>
-                                    <h3 class="link-title text-white">Let's Start</h3>
-                                </div>
-                                <div class="other-cc">
-                                    <span class="badge-text text-white"></span>
-                                    <div class="icon-arrow text-white">
-                                        <i class="ri-arrow-drop-right-line"></i>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <!-- ===================================
-              START THE COPYRIGHT
-            ==================================== -->
-            <section class="copyright-mark">
-                <div class="content">
-                    <img class="logo-gray" src="images/logo-gray.svg" alt="image">
-                    <p>Copyright © Unic 2022</p>
-                </div>
-            </section>
+                <div class="content-cards-NFTs margin-t-20">
+                    <div class="swiper cardGradual">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <!-- item-card-gradual -->
+                                <div class="item-card-gradual">
+                                    <!-- <div class="head-card"></div> -->
+                                    <a href="#" class="body-card">
+                                        <div class="cover-nft">
+                                            <picture>
+                                                <source srcset="images/slider/down/1.png" type="image/webp">
+                                                <img class="img-cover" src="images/slider/down/1.png" alt="image NFT">
+                                            </picture>
+                                            <div class="icon-type">
+                                                <i class="ri-vidicon-line"></i>
+                                            </div>
+                                            <div class="countdown-time">
+                                                <span>08H 38M 16S</span>
+                                            </div>
+                                        </div>
+                                        <div class="title-card-nft">
+                                            <div class="side-one">
+                                                <h2>The Dark Corner</h2>
+                                                <p>8 Editions Minted</p>
+                                            </div>
+                                            <div class="side-other">
+                                                <span class="no-sales">3 for sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="creator-name">
+                                            <div class="image-user">
+                                                <picture>
+                                                    <source srcset="images/avatar/14.webp" type="image/webp">
+                                                    <img class="img-avatar" src="images/avatar/14.jpg" alt="">
+                                                </picture>
+                                                <div class="icon">
+                                                    <i class="ri-checkbox-circle-fill"></i>
+                                                </div>
+                                            </div>
+                                            <h3>Michael Wan</h3>
+                                        </div>
+                                    </a>
+                                    <div class="footer-card">
+                                        <div class="starting-bad">
+                                            <h4>2.78 ETH</h4>
+                                            <span>Starting Bid</span>
+                                        </div>
+                                        <div class="btn-like-click">
+                                            <div class="btnLike">
+                                                <input type="checkbox">
+                                                <span class="count-likes">195</span>
+                                                <i class="ri-heart-3-line"></i>
 
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- item-card-gradual -->
+                                <div class="item-card-gradual">
+                                    <!-- <div class="head-card"></div> -->
+                                    <a href="#" class="body-card">
+                                        <div class="cover-nft">
+                                            <picture>
+                                                <source srcset="images/slider/down/2.png" type="image/webp">
+                                                <img class="img-cover" src="images/slider/down/2.png" alt="image NFT">
+                                            </picture>
+                                            <div class="countdown-time">
+                                                <span>08H 38M 16S</span>
+                                            </div>
+                                        </div>
+                                        <div class="title-card-nft">
+                                            <div class="side-one">
+                                                <h2>Galaxy on Earth</h2>
+                                                <p>6 Editions Minted</p>
+                                            </div>
+                                            <div class="side-other">
+                                                <span class="no-sales">2 for sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="creator-name">
+                                            <div class="image-user">
+                                                <picture>
+                                                    <source srcset="images/avatar/21.webp" type="image/webp">
+                                                    <img class="img-avatar" src="images/avatar/21.jpg" alt="">
+                                                </picture>
+                                                <div class="icon">
+                                                    <i class="ri-checkbox-circle-fill"></i>
+                                                </div>
+                                            </div>
+                                            <h3>Nicholas Hong</h3>
+                                        </div>
+                                    </a>
+                                    <div class="footer-card">
+                                        <div class="starting-bad">
+                                            <h4>2.40 ETH</h4>
+                                            <span>Starting Bid</span>
+                                        </div>
+                                        <div class="btn-like-click">
+                                            <div class="btnLike">
+                                                <input type="checkbox" checked>
+                                                <span class="count-likes">164</span>
+                                                <i class="ri-heart-3-line"></i>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- item-card-gradual -->
+                                <div class="item-card-gradual">
+                                    <!-- <div class="head-card"></div> -->
+                                    <a href="#" class="body-card">
+                                        <div class="cover-nft">
+                                            <picture>
+                                                <source srcset="images/slider/down/3.png" type="image/webp">
+                                                <img class="img-cover" src="images/slider/down/3.png" alt="image NFT">
+                                            </picture>
+                                            <div class="countdown-time">
+                                                <span>08H 38M 16S</span>
+                                            </div>
+                                        </div>
+                                        <div class="title-card-nft">
+                                            <div class="side-one">
+                                                <h2>The Scary Shib</h2>
+                                                <p>8 Editions Minted</p>
+                                            </div>
+                                            <div class="side-other">
+                                                <span class="no-sales">3 for sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="creator-name">
+                                            <div class="image-user">
+                                                <picture>
+                                                    <source srcset="images/avatar/13.webp" type="image/webp">
+                                                    <img class="img-avatar" src="images/avatar/13.jpg" alt="">
+                                                </picture>
+                                                <div class="icon">
+                                                    <i class="ri-checkbox-circle-fill"></i>
+                                                </div>
+                                            </div>
+                                            <h3>Justin Chan</h3>
+                                        </div>
+                                    </a>
+                                    <div class="footer-card">
+                                        <div class="starting-bad">
+                                            <h4>1.27 ETH</h4>
+                                            <span>Starting Bid</span>
+                                        </div>
+                                        <div class="btn-like-click">
+                                            <div class="btnLike">
+                                                <input type="checkbox">
+                                                <span class="count-likes">95</span>
+                                                <i class="ri-heart-3-line"></i>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- item-card-gradual -->
+                                <div class="item-card-gradual">
+                                    <!-- <div class="head-card"></div> -->
+                                    <a href="#" class="body-card">
+                                        <div class="cover-nft">
+                                            <picture>
+                                                <source srcset="images/slider/down/1.png" type="image/webp">
+                                                <img class="img-cover" src="images/slider/down/1.png" alt="image NFT">
+                                            </picture>
+                                            <div class="icon-type">
+                                                <i class="ri-vidicon-line"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="title-card-nft">
+                                            <div class="side-one">
+                                                <h2>The Dark Corner</h2>
+                                                <p>25 Editions Minted</p>
+                                            </div>
+                                            <div class="side-other">
+                                                <span class="no-sales">5 for sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="creator-name">
+                                            <div class="image-user">
+                                                <picture>
+                                                    <source srcset="images/avatar/17.webp" type="image/webp">
+                                                    <img class="img-avatar" src="images/avatar/17.jpg" alt="">
+                                                </picture>
+                                                <div class="icon">
+                                                    <i class="ri-checkbox-circle-fill"></i>
+                                                </div>
+                                            </div>
+                                            <h3>Steve Jones</h3>
+                                        </div>
+                                    </a>
+                                    <div class="footer-card">
+                                        <div class="starting-bad">
+                                            <h4>1.29 ETH</h4>
+                                            <span>Starting Bid</span>
+                                        </div>
+                                        <div class="btn-like-click">
+                                            <div class="btnLike">
+                                                <input type="checkbox">
+                                                <span class="count-likes">195</span>
+                                                <i class="ri-heart-3-line"></i>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- item-card-gradual -->
+                                <div class="item-card-gradual">
+                                    <!-- <div class="head-card"></div> -->
+                                    <a href="#" class="body-card">
+                                        <div class="cover-nft">
+                                            <picture>
+                                                <source srcset="images/slider/down/2.png" type="image/webp">
+                                                <img class="img-cover" src="images/slider/down/2.png" alt="image NFT">
+                                            </picture>
+                                            <div class="countdown-time">
+                                                <span>08H 38M 16S</span>
+                                            </div>
+                                        </div>
+                                        <div class="title-card-nft">
+                                            <div class="side-one">
+                                                <h2>Ecstasy of the Dead</h2>
+                                                <p>350 Editions Minted</p>
+                                            </div>
+                                            <div class="side-other">
+                                                <span class="no-sales">9 for sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="creator-name">
+                                            <div class="image-user">
+                                                <picture>
+                                                    <source srcset="images/avatar/19.webp" type="image/webp">
+                                                    <img class="img-avatar" src="images/avatar/19.jpg" alt="">
+                                                </picture>
+                                                <div class="icon">
+                                                    <i class="ri-checkbox-circle-fill"></i>
+                                                </div>
+                                            </div>
+                                            <h3>Hunter Taylor</h3>
+                                        </div>
+                                    </a>
+                                    <div class="footer-card">
+                                        <div class="starting-bad">
+                                            <h4>1.79 ETH</h4>
+                                            <span>Starting Bid</span>
+                                        </div>
+                                        <div class="btn-like-click">
+                                            <div class="btnLike">
+                                                <input type="checkbox">
+                                                <span class="count-likes">297</span>
+                                                <i class="ri-heart-3-line"></i>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- item-card-gradual -->
+                                <div class="item-card-gradual">
+                                    <!-- <div class="head-card"></div> -->
+                                    <a href="#" class="body-card">
+                                        <div class="cover-nft">
+                                            <picture>
+                                                <source srcset="images/slider/down/3.png" type="image/webp">
+                                                <img class="img-cover" src="images/slider/down/3.png" alt="image NFT">
+                                            </picture>
+                                            <div class="icon-type">
+                                                <i class="ri-vidicon-line"></i>
+                                            </div>
+                                            <div class="countdown-time">
+                                                <span>08H 38M 16S</span>
+                                            </div>
+                                        </div>
+                                        <div class="title-card-nft">
+                                            <div class="side-one">
+                                                <h2>The Moon Boi</h2>
+                                                <p>14 Editions Minted</p>
+                                            </div>
+                                            <div class="side-other">
+                                                <span class="no-sales">2 for sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="creator-name">
+                                            <div class="image-user">
+                                                <picture>
+                                                    <source srcset="images/avatar/18.webp" type="image/webp">
+                                                    <img class="img-avatar" src="images/avatar/18.jpg" alt="">
+                                                </picture>
+                                                <div class="icon">
+                                                    <i class="ri-checkbox-circle-fill"></i>
+                                                </div>
+                                            </div>
+                                            <h3>Craig Leach</h3>
+                                        </div>
+                                    </a>
+                                    <div class="footer-card">
+                                        <div class="starting-bad">
+                                            <h4>2.78 ETH</h4>
+                                            <span>Starting Bid</span>
+                                        </div>
+                                        <div class="btn-like-click">
+                                            <div class="btnLike">
+                                                <input type="checkbox">
+                                                <span class="count-likes">195</span>
+                                                <i class="ri-heart-3-line"></i>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===================================
+              START THE BEST SELLER
+            ==================================== -->
+            <section class="margin-t-20 unList-bestSeller">
+                <!-- un-title-default -->
+                <div class="un-title-default">
+                    <div class="text">
+                        <h2>Best Sellers</h2>
+                        <p>Best seller of this week's NFTs</p>
+                    </div>
+                    <div class="un-block-right">
+                        <a href="#" class="icon-back" aria-label="iconBtn">
+                            <i class="ri-arrow-drop-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="content-list-sellers">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <div class="nav-link item-user-seller">
+                                <a href="#" class="item-user-img">
+                                    <picture>
+                                        <source srcset="images/avatar/22.webp" type="image/webp">
+                                        <img class="avt-img" src="images/avatar/22.jpg" alt="">
+                                    </picture>
+                                    <div class="txt-user">
+                                        <h5>9.4 <span>ETH</span></h5>
+                                        <p>John Sullivan <i class="ri-checkbox-circle-fill"></i> </p>
+                                    </div>
+                                </a>
+                                <div class="other-option">
+                                    <button type="button" class="btn btn-box-check">
+                                        <input type="checkbox">
+                                        <div class="icon-box">
+                                            <i class="ri-add-fill"></i>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link item-user-seller">
+                                <a href="#" class="item-user-img">
+                                    <picture>
+                                        <source srcset="images/avatar/9.webp" type="image/webp">
+                                        <img class="avt-img" src="images/avatar/9.jpg" alt="">
+                                    </picture>
+                                    <div class="txt-user">
+                                        <h5>7.2 <span>ETH</span></h5>
+                                        <p>Doris Logue <i class="ri-checkbox-circle-fill"></i> </p>
+                                    </div>
+                                </a>
+                                <div class="other-option">
+                                    <button type="button" class="btn btn-box-check">
+                                        <input type="checkbox" checked>
+                                        <div class="icon-box">
+                                            <i class="ri-add-fill"></i>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link item-user-seller">
+                                <a href="#" class="item-user-img">
+                                    <picture>
+                                        <source srcset="images/avatar/16.webp" type="image/webp">
+                                        <img class="avt-img" src="images/avatar/16.jpg" alt="">
+                                    </picture>
+                                    <div class="txt-user">
+                                        <h5>6.8 <span>ETH</span></h5>
+                                        <p>James White <i class="ri-checkbox-circle-fill"></i> </p>
+                                    </div>
+                                </a>
+                                <div class="other-option">
+                                    <button type="button" class="btn btn-box-check">
+                                        <input type="checkbox">
+                                        <div class="icon-box">
+                                            <i class="ri-add-fill"></i>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link item-user-seller">
+                                <a href="#" class="item-user-img">
+                                    <picture>
+                                        <source srcset="images/avatar/17.webp" type="image/webp">
+                                        <img class="avt-img" src="images/avatar/17.jpg" alt="">
+                                    </picture>
+                                    <div class="txt-user">
+                                        <h5>5.1 <span>ETH</span></h5>
+                                        <p>Tito_Calab <i class="ri-checkbox-circle-fill"></i> </p>
+                                    </div>
+                                </a>
+                                <div class="other-option">
+                                    <button type="button" class="btn btn-box-check">
+                                        <input type="checkbox">
+                                        <div class="icon-box">
+                                            <i class="ri-add-fill"></i>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </div>
-
+        <!-- ===================================
+          START THE BOTTOM NAVIGATION
+        ==================================== -->
+        <footer class="un-bottom-navigation filter-blur">
+            <div class="em_body_navigation border-0 -active-links">
+                <div class="item_link">
+                    <a href="#" class="btn btn_navLink" aria-label="btnNavigation">
+                        <div class="icon_current">
+                            <i class="ri-home-5-line"></i>
+                        </div>
+                        <div class="icon_active">
+                            <i class="ri-home-5-fill"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_link">
+                    <a href="#" class="btn btn_navLink" aria-label="btnNavigation">
+                        <div class="icon_current">
+                            <i class="ri-search-2-line"></i>
+                        </div>
+                        <div class="icon_active">
+                            <i class="ri-search-2-fill"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_link">
+                    <button type="button" name="uploadItem" aria-label="uploadItem"
+                        class="btn btn_navLink without_active" data-bs-toggle="modal" data-bs-target="#mdllUploadItem"
+                        aria-label="btnNavigation">
+                        <div class="btn btnCircle_default">
+                            <i class="ri-add-line"></i>
+                        </div>
+                    </button>
+                </div>
+                <div class="item_link">
+                    <a href="#" class="btn btn_navLink" aria-label="btnNavigation">
+                        <div class="icon_current">
+                            <i class="ri-heart-3-line"></i>
+                        </div>
+                        <div class="icon_active">
+                            <i class="ri-heart-3-fill"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="item_link">
+                    <a href="#" class="btn btn_navLink" aria-label="btnNavigation">
+                        <div class="icon_current">
+                            <i class="ri-user-4-line"></i>
+                        </div>
+                        <div class="icon_active">
+                            <i class="ri-user-4-fill"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </footer>
     </div>
     <!-- ===================================
       START THE MODAL UPLOAD
@@ -293,10 +665,10 @@
                             to sell one collectible multiple times
                         </p>
                         <div class="grid_buttonUpload">
-                            <a href="page-create-single.html" class="btn btn-create bg-primary text-white margin-b-20">
+                            <a href="#" class="btn btn-create bg-primary text-white margin-b-20">
                                 Create Single
                             </a>
-                            <a href="page-create-multi.html"
+                            <a href="#"
                                 class="btn btn-create bg-white border border-solid border-snow text-dark">
                                 Create Multiple
                             </a>
@@ -426,7 +798,7 @@
                 <div class="modal-body">
                     <ul class="nav flex-column -active-links">
                         <li class="nav-item">
-                            <a class="nav-link" href="homepage.html">
+                            <a class="nav-link" href="#">
                                 <div class="icon_current">
                                     <i class="ri-compass-line"></i>
                                 </div>
@@ -436,52 +808,10 @@
                                 <span class="title_link">Discover</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="app-homes.html">
-                                <div class="icon_current">
-                                    <i class="ri-home-5-line"></i>
-                                </div>
-                                <div class="icon_active">
-                                    <i class="ri-home-5-fill"></i>
-                                </div>
-                                <span class="title_link">Home Styles</span>
-
-                                <span class="xs-badge">8</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="app-pages.html">
-                                <div class="icon_current">
-                                    <i class="ri-pages-line"></i>
-                                </div>
-                                <div class="icon_active">
-                                    <i class="ri-pages-fill"></i>
-                                </div>
-                                <span class="title_link">Page Packs</span>
-
-                                <div class="badge-circle">
-                                    <span class="doted_item"></span>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="app-components.html">
-                                <div class="icon_current">
-                                    <i class="ri-layout-2-line"></i>
-                                </div>
-                                <div class="icon_active">
-                                    <i class="ri-layout-2-fill"></i>
-                                </div>
-                                <span class="title_link">Components</span>
-
-                            </a>
-                        </li>
-
                         <label class="title__label">other</label>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="page-help.html">
+                            <a class="nav-link" href="#">
                                 <div class="icon_current">
                                     <i class="ri-questionnaire-line"></i>
                                 </div>
@@ -493,7 +823,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="page-about.html">
+                            <a class="nav-link" href="#">
                                 <div class="icon_current">
                                     <i class="ri-file-info-line"></i>
                                 </div>
@@ -505,7 +835,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="homepage.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <div class="icon_current">
                                     <i class="ri-logout-box-r-line"></i>
                                 </div>
@@ -517,19 +847,6 @@
                         </li>
 
                     </ul>
-                </div>
-                <div class="modal-footer">
-                    <div class="em_darkMode_menu">
-                        <label class="text" for="switchDark">
-                            <h3>Dark Mode</h3>
-                            <p>Browsing in night mode</p>
-                        </label>
-                        <label class="switch_toggle toggle_lg theme-switch" for="switchDark">
-                            <input type="checkbox" class="switchDarkMode theme-switch" id="switchDark"
-                                aria-describedby="switchDark">
-                            <span class="handle"></span>
-                        </label>
-                    </div>
                 </div>
             </div>
         </div>
@@ -547,7 +864,7 @@
                         <p>
                             Connect wallet to browse, Buy, Sell, and create NFTs items.
                         </p>
-                        <a href="page-connect-wallet.html" class="btn btn-md-size bg-primary text-white rounded-pill">
+                        <a href="#" class="btn btn-md-size bg-primary text-white rounded-pill">
                             Connect wallet
                         </a>
                     </div>
@@ -558,7 +875,7 @@
                 <div class="modal-body">
                     <ul class="nav flex-column -active-links">
                         <li class="nav-item">
-                            <a class="nav-link" href="homepage.html">
+                            <a class="nav-link" href="#">
                                 <div class="icon_current">
                                     <i class="ri-compass-line"></i>
                                 </div>
@@ -569,7 +886,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="app-homes.html">
+                            <a class="nav-link" href="#">
                                 <div class="icon_current">
                                     <i class="ri-home-5-line"></i>
                                 </div>
@@ -582,7 +899,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="app-pages.html">
+                            <a class="nav-link" href="#">
                                 <div class="icon_current">
                                     <i class="ri-pages-line"></i>
                                 </div>
@@ -598,7 +915,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="app-components.html">
+                            <a class="nav-link" href="#">
                                 <div class="icon_current">
                                     <i class="ri-layout-2-line"></i>
                                 </div>
@@ -613,7 +930,7 @@
                         <label class="title__label">other</label>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="page-help.html">
+                            <a class="nav-link" href="#">
                                 <div class="icon_current">
                                     <i class="ri-questionnaire-line"></i>
                                 </div>
@@ -625,7 +942,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="page-about.html">
+                            <a class="nav-link" href="#">
                                 <div class="icon_current">
                                     <i class="ri-file-info-line"></i>
                                 </div>
@@ -654,6 +971,71 @@
         </div>
     </div>
     <!-- ===================================
+      START THE CREATE STORY MODAL
+    ==================================== -->
+    <div class="modal sidebarMenu -left --fullScreen modal-filter fade" id="mdllAddStory" tabindex="-1"
+        aria-labelledby="sidebarMenuLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="title-modal">Create Story</h1>
+                    <button type="button" class="btn btnClose" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="ri-close-fill"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="un-create-collectibles bg-white p-0">
+                        <div class="form-group upload-form">
+                            <h2>Upload file</h2>
+                            <p>Choose your file to upload</p>
+                            <div class="upload-input-form">
+                                <input type="file">
+                                <div class="content-input">
+                                    <div class="icon"><i class="ri-upload-cloud-line"></i></div>
+                                    <span>PNG, GIF, JPG, MP4 . Max 5 mb.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group icon-right">
+                            <label>Add Link</label>
+                            <div class="input_group">
+                                <input type="url" class="form-control" placeholder='e. g. "www.example.com"'>
+                                <div class="icon">
+                                    <i class="ri-link"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Link Text</label>
+                            <div class="inpust_group">
+                                <input type="text" class="form-control" placeholder='e. g. "INSTALL APP"'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-0 pt-2">
+                    <div class="footer-pages-forms">
+                        <div class="content">
+                            <div class="links-clear-data">
+                                <button type="button" class="btn link-clear" data-bs-toggle="modal"
+                                    data-bs-dismiss="modal">
+                                    <i class="ri-close-circle-line"></i>
+                                    <span>Cancel</span>
+                                </button>
+                            </div>
+                            <a href="#" class="btn btn-bid-items">
+                                <p>Create Story</p>
+                                <div class="ico">
+                                    <i class="ri-arrow-drop-right-line"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===================================
       START STATUS CONNECTION
     ==================================== -->
     <div class="d-flex justify-content-center">
@@ -672,6 +1054,132 @@
     <script src="assets/js/custom.js"></script>
     <!-- PWA APP SERVICE REGISTRATION AND WORKS JS -->
     <script src="assets/js/pwa-services.js"></script>
+
+    <script>
+        // BUILD ITEM
+        function buildItem(id, type, length, src, preview, link, linkText, time, seen) {
+            return {
+                id, type, length, src, preview, link, linkText, time, seen
+            };
+        }
+
+        /*==================================
+        START THE STORIES [CIRCLES]
+        ==================================*/
+        var stories = new Zuck('storiesBox', {
+            autoFullScreen: true,
+            skin: 'Snapssenger',
+            avatars: false,
+            list: false,
+            openEffect: true,
+            cubeEffect: true,
+            backButton: false,
+            backNative: false,
+            localStorage: false,
+            paginationArrows: true,
+            stories: [{
+                id: 'boxOne',
+                photo: 'images/slider/up/1.jpg',
+                name: 'NGT Genesis',
+                link: '',
+                lastUpdated: 1646933141,
+                items: [
+                    buildItem('1', 'photo', 4, 'images/slider/up/1.jpg', 'images/slider/up/1.jpg', '', '', 1646933141, false),
+                ],
+            },
+            {
+                id: 'boxTwo',
+                photo: 'images/slider/up/2.jpg',
+                name: 'NGT Genesis',
+                link: '',
+                lastUpdated: 1649600741,
+                items: [
+                    buildItem('2', 'photo', 4, 'images/slider/up/2.jpg', 'images/slider/up/2.jpg', '', '', 1649600741, false),
+                ],
+            },
+            {
+                id: 'boxThree',
+                photo: 'images/slider/up/3.jpg',
+                name: 'NGT Genesis',
+                link: '',
+                lastUpdated: 1649773541,
+                items: [
+                    buildItem('3', 'photo', 4, 'images/slider/up/3.jpg', 'images/slider/up/3.jpg', '', '', 1649773541, false),
+                ],
+            },
+            {
+                id: 'boxFour',
+                photo: 'images/slider/up/4.jpg',
+                name: 'NGT Genesis',
+                link: '',
+                lastUpdated: 1649946341,
+                items: [
+                    buildItem('4', 'photo', 4, 'images/slider/up/4.jpg', 'images/slider/up/4.jpg', '', '', 1649946341, false),
+                ],
+            },
+            {
+                id: 'boxFive',
+                photo: 'images/slider/up/5.jpg',
+                name: 'NGT Genesis',
+                link: '',
+                lastUpdated: 1649082341,
+                items: [
+                    buildItem('5', 'photo', 4, 'images/slider/up/5.jpg', 'images/slider/up/5.jpg', '', '', 1649082341, false),
+                ],
+            },
+            {
+                id: 'boxSix',
+                photo: 'images/slider/up/6.jpg',
+                name: 'NGT Genesis',
+                link: '',
+                lastUpdated: 1649082341,
+                items: [
+                    buildItem('6', 'photo', 4, 'images/slider/up/6.jpg', 'images/slider/up/6.jpg', '', '', 1649082341, false),
+                ],
+            },
+            {
+                id: 'boxSeven',
+                photo: 'images/slider/up/7.jpg',
+                name: 'NGT Genesis',
+                link: '',
+                lastUpdated: 1649082341,
+                items: [
+                    buildItem('7', 'photo', 4, 'images/slider/up/7.jpg', 'images/slider/up/7.jpg', '', '', 1649082341, false),
+                ],
+            },
+            {
+                id: 'boxEight',
+                photo: 'images/slider/up/8.jpg',
+                name: 'NGT Genesis',
+                link: '',
+                lastUpdated: 1649082341,
+                items: [
+                    buildItem('8', 'photo', 4, 'images/slider/up/8.jpg', 'images/slider/up/8.jpg', '', '', 1649082341, false),
+                ],
+            },
+            {
+                id: 'boxNine',
+                photo: 'images/slider/up/9.jpg',
+                name: 'NGT Genesis',
+                link: '',
+                lastUpdated: 1649082341,
+                items: [
+                    buildItem('9', 'photo', 4, 'images/slider/up/9.jpg', 'images/slider/up/9.jpg', '', '', 1649082341, false),
+                ],
+            },
+            {
+                id: 'boxTen',
+                photo: 'images/slider/up/10.jpg',
+                name: 'NGT Genesis',
+                link: '',
+                lastUpdated: 1649082341,
+                items: [
+                    buildItem('10', 'photo', 4, 'images/slider/up/10.jpg', 'images/slider/up/10.jpg', '', '', 1649082341, false),
+                ],
+            }],
+        });
+    </script>
+
 </body>
 
 </html>
